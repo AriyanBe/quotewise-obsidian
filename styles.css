@@ -1,8 +1,55 @@
-/*
+.quotewise-explorer {
+	overflow: auto;
+	padding: var(--size-4-3);
+}
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+.quotewise-form,
+.quotewise-results {
+	display: grid;
+	gap: var(--size-4-2);
+}
 
-If your plugin does not need CSS, delete this file.
+.quotewise-form > * {
+	min-width: 0;
+	width: 100%;
+}
 
-*/
+.quotewise-card {
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-m);
+	padding: var(--size-4-3);
+	overflow-wrap: anywhere;
+}
+
+.quotewise-card blockquote,
+.quotewise-attribution blockquote {
+	margin: 0;
+	padding-inline-start: var(--size-4-3);
+	border-inline-start: 2px solid var(--blockquote-border-color);
+	white-space: pre-wrap;
+}
+
+.quotewise-meta,
+.quotewise-status {
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+}
+
+.quotewise-meta {
+	margin-block: var(--size-4-1);
+}
+
+.quotewise-status:not(:empty) {
+	margin-block: var(--size-4-2);
+}
+
+.quotewise-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--size-4-1);
+	margin-block-start: var(--size-4-1);
+}
+
+.quotewise-attribution .quotewise-card + .quotewise-card {
+	margin-block-start: var(--size-4-2);
+}

@@ -29,4 +29,16 @@ export default defineConfig(
 		},
 	},
 	...obsidianmd.configs.recommended,
+	{
+		rules: {
+			'obsidianmd/ui/sentence-case': ['warn', {brands: ['Quotewise', 'Secret Storage'], acronyms: ['API', 'README']}],
+		},
+	},
+	{
+		files: ['tests/**/*.ts'],
+		rules: {
+			'obsidianmd/no-nodejs-modules': 'off',
+			'obsidianmd/no-tfile-tfolder-cast': 'off',
+		},
+	},
 );

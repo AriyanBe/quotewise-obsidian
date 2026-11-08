@@ -1,16 +1,18 @@
 {
-	"name": "obsidian-sample-plugin",
-	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"name": "quotewise-obsidian",
+	"version": "0.1.0",
+	"description": "Discover and collect quotations with Quotewise in Obsidian.",
 	"main": "main.js",
 	"type": "module",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
 		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
 		"version": "node version-bump.mjs && git add manifest.json versions.json",
-		"lint": "eslint ."
+		"lint": "eslint .",
+		"test": "esbuild tests/quotewise.test.ts --bundle --platform=node --outfile=node_modules/.cache/quotewise.test.cjs && node node_modules/.cache/quotewise.test.cjs"
 	},
-	"keywords": [],
+	"keywords": ["obsidian", "quotations", "commonplace-book"],
+	"author": "Ari",
 	"license": "0-BSD",
 	"devDependencies": {
 		"@eslint/js": "^9.39.4",
