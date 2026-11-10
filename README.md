@@ -1,6 +1,6 @@
 # Quotewise for Obsidian
 
-Discover quotations, check their attribution, and save them to your notes. Created by **Ari**. An independent integration with Quotewise.
+Discover quotations, check their attribution, and save them to your notes. An independent integration with Quotewise.
 
 ## Install
 
